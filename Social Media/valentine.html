@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <link rel="stylesheet" href="style2.0.css">
+</head>
+<body>
+    <main class="stage">
+        <section class="card active" id="name-card">
+            <h2>What is your name?</h2>
+            <p class="sub">I will use it in a sweet message.</p>
+            <input type="text" id="name-input" placeholder="Ridwaan" maxlength="24" />
+            <button class="btn" id="continue-btn">Continue</button>
+        </section>
+
+        <section class="card" id="hello-card">
+            <h2>Hello, <span id="name-output">Ridwaan</span></h2>
+            <p class="sub">Can I ask you something?</p>
+            <button class="btn" id="ask-btn">Of course</button>
+        </section>
+
+        <section class="card" id="final-card">
+            <h2>Will you be my Valentine, <span id="name-output-2">Ridwaan</span>?</h2>
+            <div class="actions">
+                <button class="btn yes" id="yes-btn">Yes</button>
+                <button class="btn no" id="no-btn">No</button>
+            </div>
+        </section>
+
+        <section class="card" id="congrats-card">
+            <h2>Congratulations, <span id="name-output-3">Ridwaan</span>!</h2>
+            <p class="sub">You just made my day.</p>
+        </section>
+    </main>
+
+    <div id="confetti" aria-hidden="true"></div>
+
+    <script>
+        const nameInput = document.getElementById("name-input");
+        const continueBtn = document.getElementById("continue-btn");
+        const askBtn = document.getElementById("ask-btn");
+        const nameCard = document.getElementById("name-card");
+        const helloCard = document.getElementById("hello-card");
+        const finalCard = document.getElementById("final-card");
+        const nameOutput = document.getElementById("name-output");
+        const nameOutput2 = document.getElementById("name-output-2");
+        const nameOutput3 = document.getElementById("name-output-3");
+        const yesBtn = document.getElementById("yes-btn");
+        const noBtn = document.getElementById("no-btn");
+        const confetti = document.getElementById("confetti");
+        const congratsCard = document.getElementById("congrats-card");
+
+        function setName() {
+            const value = nameInput.value.trim();
+            const name = value.length > 0 ? value : "Ridwaan";
+            nameOutput.textContent = name;
+            nameOutput2.textContent = name;
+            nameOutput3.textContent = name;
+        }
+
+        function showCard(cardToShow) {
+            [nameCard, helloCard, finalCard].forEach(card => {
+                card.classList.remove("active");
+            });
+            cardToShow.classList.add("active");
+        }
+
+        function launchConfetti() {
+            confetti.innerHTML = "";
+            const colors = ["#ff4d6d", "#ffd166", "#ff7eb3", "#8ec5ff", "#b28dff", "#7ed957"];
+            for (let i = 0; i < 120; i += 1) {
+                const piece = document.createElement("span");
+                piece.className = "confetti-piece";
+                piece.style.left = Math.random() * 100 + "%";
+                piece.style.backgroundColor = colors[i % colors.length];
+                piece.style.animationDelay = (Math.random() * 0.5) + "s";
+                piece.style.animationDuration = (2.5 + Math.random() * 2) + "s";
+                piece.style.width = (6 + Math.random() * 6) + "px";
+                piece.style.height = (10 + Math.random() * 10) + "px";
+                confetti.appendChild(piece);
+            }
+            confetti.classList.add("show");
+            setTimeout(() => confetti.classList.remove("show"), 3500);
+        }
+
+        continueBtn.addEventListener("click", () => {
+            setName();
+            showCard(helloCard);
+        });
+
+        askBtn.addEventListener("click", () => {
+            showCard(finalCard);
+        });
+
+        function goToCongrats() {
+            showCard(congratsCard);
+            launchConfetti();
+        }
+
+        yesBtn.addEventListener("click", goToCongrats);
+
+        noBtn.addEventListener("click", () => {
+            noBtn.textContent = "Yes";
+            noBtn.classList.add("morphed");
+            setTimeout(goToCongrats, 600);
+        });
+    </script>
+</body>
+</html>

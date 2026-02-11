@@ -1,0 +1,129 @@
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.social-icons{
+    display:flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.icon-card{
+    position: relative;
+    width: 56px;
+    height: 56px;
+    background-color: bisque;
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.2) ;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.4s ease, box-shadow 0.4s ease background-color 0.4s ease;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.icon-card img{
+    width: 28px;
+    height: 28px;
+    margin-left: 14px;
+}
+
+.icon-label{
+    position: absolute;
+    left: 56px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    text-transform: lowercase;
+    color: #fff;
+    opacity: 0;
+    white-space: nowrap;
+    transition: 0.2s ease 0.15s;
+    pointer-events: none;
+}
+
+.icon-card:hover{
+    width: 160px;
+
+}
+
+.icon-card:hover .icon-label{
+    opacity: 1;
+}
+
+.facebook:hover{
+    background-color: #1877f2;
+    box-shadow: 0 0 15px rgba(24, 119, 242, 0.95), 0 0 30px
+     rgba(24, 119, 242, 0.95);
+
+}
+
+.x:hover:hover{
+    background-color: #111;
+    box-shadow: 0 0 15px rgba(17, 17, 17, 0.95), 0 0 30px
+     rgba(17, 17, 17, 0.95);
+
+}
+
+.instagram:hover{
+    background-color: #c13584;
+    box-shadow: 0 0 15px rgba(193, 53, 132, 0.95), 0 0 30px
+     rgba(193, 53, 132, 0.95);
+
+}
+
+.linkedin:hover{
+    background-color: #0a66c2;
+    box-shadow: 0 0 15px rgba(10, 109, 194, 0.95), 0 0 30px
+     rgba(10, 104, 194, 0.95);
+
+}
+
+
+.youtube:hover{
+    background-color: #ff0000;
+    box-shadow: 0 0 15px rgba(255 0 0 0.95), 0 0 30px
+     rgba(255, 0, 0, 0.95);
+
+    
+}
+
+.github:hover{
+    background-color: #24292e;
+    box-shadow: 0 0 15px rgba(36, 41, 46, 0.95), 0 0 30px
+     rgba(36, 41, 46, 0.95);
+}
+
+.gitlub:hover{
+    background-color: #fc6d26;
+    box-shadow: rgba(252 109 38 0.95), 0 0 30px
+    rgba(252 109 38 0.950);
+    
+}
+
+.chrome:hover{
+    background-color: #1ae;
+    box-shadow: 0 0 15px rgba(26 115 232 0.95)
+    0 0 30px rgba(26 115 232 0.95);
+}
+
+.twitch:hover{
+    background-color: #9146ff;
+    box-shadow: 0 0 15px rgba(145 70 255, 0.95)
+    0 0 30px rgba(145 70 255 0.95);
+    
+}
