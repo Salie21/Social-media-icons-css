@@ -1,21 +1,23 @@
-🎨 Social Media Icon Animations
+# 🎨 Social Media Icon Animations
 
-A smooth and modern social media icon animation built using pure HTML and CSS.
+A smooth and modern social media icon animation built using pure HTML and CSS.  
 This project features gradient backgrounds, glowing effects, and clean UI styling — no JavaScript required.
 
-🚀 Features
+---
 
-Smooth hover animations
+## 🚀 Features
 
-Modern gradient background
+- ✨ Smooth hover animations  
+- 🌈 Gradient background  
+- 💡 Soft glow and shadow effects  
+- 📱 Responsive layout  
+- ⚡ Built with only HTML & CSS  
 
-Clean card-style layout
+---
 
-Responsive design
+## 📂 Project Structure
 
-Pure HTML & CSS
-
-📂 Project Structure
+```
 project-folder/
 │── index.html
 │── style.css
@@ -29,54 +31,72 @@ project-folder/
 │   ├── gitlab.svg
 │   ├── chrome.svg
 │   └── twitch.svg
+```
 
-🧱 Technologies Used
+---
 
-HTML5
+## 🧱 Technologies Used
 
-CSS3
+- HTML5  
+- CSS3  
+- Flexbox  
+- CSS Gradients  
+- CSS Transitions  
+- CSS Keyframes  
 
-Flexbox
+---
 
-CSS Gradients
+## 🖥️ How to Use
 
-CSS Animations
+1. Clone this repository:
 
-🖥️ How to Run the Project
+   ```bash
+   git clone https://github.com/your-username/social-media-animations.git
+   ```
 
-Download or clone this repository
+2. Open the project folder.
+3. Make sure the `icons` folder is in the same directory as `index.html`.
+4. Open `index.html` in your browser.
 
-Make sure the icons folder is in the same directory as index.html
+---
 
-Open index.html in your browser
-
-That’s it 🎉
-
-🎨 Customization
+## 🎨 Customization
 
 You can easily customize:
 
-Background colors in the body
+- Background colors inside `body`
+- Card design inside `.card`
+- Button styling inside `.btn`
+- Animation timing inside `@keyframes`
 
-Card design in .card
+Example:
 
-Button styles in .btn
+```css
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 245, 255, 0.25);
+}
+```
 
-Animation effects in @keyframes
+---
 
-💡 Purpose
+## 💡 Purpose
 
-This project was created to practice CSS animations and create a visually appealing social media UI component.
+This project was created to practice CSS animations and build a clean, modern UI component for social media icons.
 
 Perfect for:
+- Frontend beginners  
+- Portfolio projects  
+- UI design inspiration  
+- Social media developers  
 
-Frontend beginners
+---
 
-Portfolio projects
+## ⭐ Support
 
-UI inspiration
+If you found this project helpful, consider giving it a star ⭐  
+Thank you for checking it out!
 
-Social media content creators
 
 ⭐ Support
 
